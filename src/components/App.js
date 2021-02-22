@@ -113,7 +113,7 @@ class App extends React.Component{
                 {
                     !this.state.editing && <ul className="list-group">
                     {this.state.todos.map((item,index)=>{
-                        return <ListItem editTodo={()=>this.editTodo(index)} item={item} deleteTodo={()=>this.deleteTodo(index)}/>
+                        return <ListItem key={item.id} editTodo={()=>this.editTodo(index)} item={item} deleteTodo={()=>this.deleteTodo(index) }/>
                     })}
                 </ul>
                 }
